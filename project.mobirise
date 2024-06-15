@@ -1,0 +1,117 @@
+{
+  "settings": {
+    "name": "Site 2024-06-15 12:57",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.18",
+    "siteFonts": [],
+    "uniqCompNum": 5,
+    "versionPublish": "5.9.18"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Owlto Finance™ | Home",
+        "meta_descr": "Owlto Finance is a cross-rollup module developed based on the Ethereum L2 rollup solution, providing a low-cost, secure, and fast asset transfer solution.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-content-text": {
+              "@media (max-width: 767px)": {
+                "padding": "0 1.5rem 1.5rem 1.5rem"
+              },
+              "@media (min-width: 768px)": {
+                "padding": "0 2.25rem 2.25rem 2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "1rem 4rem 4rem 4rem"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article08",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article8\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <div class=\"image-wrapper d-flex justify-content-center mb-4\">\n            <img mbr-if=\"showImage\" src=\"@PROJECT_PATH@/assets/images/1-6s0vttr8j1ulpwu9isvpww.jpg\" alt=\"Owlto Finance\">\n          </div>\n          <div class=\"card-content-text\">\n            <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\"><b>Owlto Finance™ | Home</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>What is Owlto Finance?</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><a href=\"https://owltosfinance.github.io/\" class=\"text-primary\">Owlto Finance</a> is a cross-rollup module developed based on the Ethereum L2 rollup solution, providing a low-cost, secure, and fast asset transfer solution. It supports asset transfers between networks such as Ethereum, Arbitrum, Arbitrum Nova, Optimism, StarkNet, zkSync, and Polygon, allowing users to freely transfer assets between different networks.\n<br>\n<br>Owlto Finance is a cross-rollup module developed based on the Ethereum L2 rollup solution, providing a low-cost, secure, and fast asset transfer solution. It supports asset transfers between networks such as Ethereum, Arbitrum, Arbitrum Nova, Optimism, StarkNet, zkSync, and Polygon, allowing users to freely transfer assets between different networks.<br><br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b><i>Key Features of Owlto Finance</i></b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>1. Cross-Chain Bridge&nbsp;</b>The cornerstone of <a href=\"https://owlto.finance/\" class=\"text-primary\">Owlto Finance</a> is its cross-chain bridge. This feature allows users to transfer assets seamlessly between different blockchain networks, such as Ethereum, Binance Smart Chain, and Polygon. By providing a unified platform for cross-chain transactions, Owlto Finance eliminates the complexities and barriers associated with moving assets across disparate networks.<br><br><b>2. Decentralized Exchange (DEX)&nbsp;</b>Owlto Finance integrates a decentralized exchange, enabling users to trade a wide variety of cryptocurrencies directly from their wallets. The DEX offers competitive fees, high liquidity, and a user-friendly interface, making it accessible to both novice and experienced traders.<br><br><b>3. Yield Farming and Staking&nbsp;</b>To incentivize participation and provide additional income streams, Owlto Finance offers yield farming and staking opportunities. Users can stake their assets to earn rewards or participate in yield farming to generate passive income. These features not only enhance user engagement but also contribute to the platform's liquidity.<br><br><b>4. Security and Transparency&nbsp;</b>Security is a paramount concern in the crypto world, and Owlto Finance takes it seriously. The platform employs robust security measures, including smart contract audits and multi-signature wallets, to protect user funds. Additionally, Owlto Finance operates with full transparency, ensuring that users have complete visibility into their transactions and the platform’s operations.<br><br><b>5. User Governance&nbsp;</b>Embracing the principles of decentralization, Owlto Finance empowers its community through a governance model. Token holders can propose and vote on key decisions, influencing the future development and direction of the platform. This democratic approach fosters a sense of ownership and aligns the platform’s evolution with the interests of its users.<br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Why Choose Owlto Finance?</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>Interoperability</b><br>Owlto Finance addresses one of the most pressing challenges in the crypto space: interoperability. By enabling cross-chain transactions, the platform ensures that users can leverage the strengths of multiple blockchain networks without being confined to a single ecosystem.<br><br><b>User-Centric Design</b><br>The platform is designed with the user in mind, offering an intuitive interface and comprehensive resources to guide users through the complexities of cross-chain transactions. Whether you’re a seasoned crypto enthusiast or a newcomer, Owlto Finance provides the tools and support needed to navigate the digital asset landscape confidently.<br><br><b>Community-Driven</b><br>Owlto Finance values its community and places a strong emphasis on user participation. Through its governance model, users have a direct say in the platform’s development, ensuring that it evolves in a way that reflects their needs and preferences.<br><br><b>Innovation and Growth</b><br>With a focus on continuous innovation, Owlto Finance is committed to expanding its features and services. The platform’s roadmap includes plans for integrating additional blockchain networks, enhancing its DeFi offerings, and introducing new financial products to cater to the diverse needs of its users.<br><br></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                  <b>Conclusion</b>\n                </h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Owlto Finance is poised to revolutionize the cryptocurrency space by providing robust cross-chain solutions and fostering a truly decentralized ecosystem. By bridging the gap between different blockchain networks, Owlto Finance empowers users to maximize the potential of their digital assets and achieve greater financial freedom.\n<br>\n<br>Join the Owlto Finance community today and be a part of the future of decentralized finance. Visit Owlto Finance website to learn more and start your journey towards seamless cross-chain transactions.</p>\n              </div>\n            </div>\n\n            <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n              <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n            </div>\n          </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "ufKwCgpBsC",
+          "_anchor": "article08-4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
